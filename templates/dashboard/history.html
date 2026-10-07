@@ -1,0 +1,27 @@
+{% extends 'dashboard/base_dashboard.html' %}
+
+{% block content %}
+
+<h3>Project Architecture & Metrics</h3>
+
+<div class="row mt-4">
+
+    <div class="col-md-4">
+        <img src="/static/images/architecture.png" class="img-fluid rounded shadow">
+    </div>
+
+    <div class="col-md-4">
+        <img src="/static/images/accuracy.png" class="img-fluid rounded shadow">
+    </div>
+
+    <div class="col-md-4">
+        <img src="/static/images/f1_score.png" class="img-fluid rounded shadow">
+    </div>
+
+</div>
+
+<a href="/my-predictions/" class="btn btn-dark mt-4">
+    My Old Predictions
+</a>
+
+{% endblock %}

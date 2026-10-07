@@ -1,0 +1,52 @@
+{% extends 'dashboard/base_dashboard.html' %}
+
+{% block content %}
+
+<h3>EEG Neurological Disorder Prediction</h3>
+
+<div class="card p-4 shadow">
+
+<form method="post">
+
+{% csrf_token %}
+
+<div class="form-group">
+
+<label>Enter 178 EEG Feature Values (Comma Separated)</label>
+
+<textarea 
+name="features"
+class="form-control"
+rows="5"
+placeholder="Example: 135,190,229,223,192,125,55,-9,-33,..."
+required>
+</textarea>
+
+<small class="text-muted">
+Enter exactly 178 values separated by commas
+</small>
+
+</div>
+
+<button class="btn btn-primary mt-3">Run Prediction</button>
+
+</form>
+
+
+{% if result %}
+
+<div class="alert alert-success mt-4">
+
+<h5>Prediction Results</h5>
+
+<p><b>Ensemble Model:</b> {{ result.ensemble_prediction }}</p>
+
+<p><b>CNN + LSTM Model:</b> {{ result.cnn_lstm_prediction }}</p>
+
+</div>
+
+{% endif %}
+
+</div>
+
+{% endblock %}

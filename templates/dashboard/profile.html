@@ -1,0 +1,25 @@
+{% extends 'dashboard/base_dashboard.html' %}
+
+{% block content %}
+
+<h3>My Profile</h3>
+
+<div class="card p-4 shadow text-center">
+
+    {% if profile.photo %}
+    <img src="{{ profile.photo.url }}"
+         style="width:150px;height:150px;border-radius:50%;
+                object-fit:cover;border:3px solid #667eea;">
+    {% else %}
+        <p>No profile image</p>
+    {% endif %}
+
+    <hr>
+
+    <p><strong>Username:</strong> {{ request.user.username }}</p>
+    <p><strong>Email:</strong> {{ request.user.email }}</p>
+    <p><strong>Bio:</strong> {{ profile.bio }}</p>
+
+</div>
+
+{% endblock %}

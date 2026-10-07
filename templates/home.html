@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>EEG Neurological Disorder Detection</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:linear-gradient(to right,#1e3c72,#2a5298);
+color:#333;
+display:flex;
+flex-direction:column;
+min-height:100vh;
+}
+
+header{
+background:#ffffff;
+padding:15px 60px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
+position:sticky;
+top:0;
+}
+
+header h2{
+color:#1e3c72;
+}
+
+nav a{
+text-decoration:none;
+margin-left:25px;
+color:#333;
+font-weight:500;
+}
+
+nav a:hover{
+color:#1e3c72;
+}
+
+.btn{
+padding:8px 18px;
+border-radius:5px;
+border:1px solid #1e3c72;
+}
+
+.btn-primary{
+background:#1e3c72;
+color:#fff;
+}
+
+.section{
+padding:70px 20px;
+text-align:center;
+}
+
+.hero h1{
+color:#ffffff;
+font-size:42px;
+}
+
+.card{
+background:#ffffff;
+max-width:1000px;
+margin:30px auto;
+padding:40px;
+border-radius:10px;
+box-shadow:0 5px 20px rgba(0,0,0,0.2);
+text-align:left;
+}
+
+.card h3{
+color:#1e3c72;
+margin-bottom:20px;
+text-align:center;
+}
+
+.card p{
+line-height:1.7;
+margin-bottom:15px;
+color:#555;
+}
+
+.advantages-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.adv-box{
+background:#f4f6fa;
+padding:20px;
+border-radius:8px;
+}
+
+.adv-box h4{
+margin-bottom:10px;
+color:#1e3c72;
+}
+
+footer{
+background:#111;
+color:#fff;
+text-align:center;
+padding:20px;
+}
+
+footer p{
+font-size:14px;
+margin:5px 0;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h2>EEG Disorder Detection AI</h2>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#advantages">Advantages</a>
+<a href="#impact">Society Impact</a>
+
+<a href="/login/" class="btn">Login</a>
+<a href="/register/" class="btn btn-primary">Register</a>
+</nav>
+
+</header>
+
+
+<section class="section hero" id="home">
+<h1>AI-Based Early Detection of Neurological Disorders using EEG</h1>
+</section>
+
+
+<section class="section" id="about">
+
+<div class="card">
+
+<h3>Project Abstract</h3>
+
+<p>
+Neurological disorders such as Epilepsy, Autism Spectrum Disorder (ASD), and Alzheimer’s disease affect brain functioning and significantly reduce quality of life. Early detection of these disorders is essential for effective treatment and prevention.
+</p>
+
+<p>
+This project proposes an EEG-based machine learning framework for detecting neurological disorders. EEG signals are preprocessed using FIR filtering and Independent Component Analysis (ICA) to remove noise and artifacts. Meaningful features such as Bandpower and Shannon entropy are extracted to represent brain activity patterns.
+</p>
+
+<p>
+The system uses ensemble machine learning models such as XGBoost and LightGBM along with a hybrid CNN–LSTM deep learning architecture to classify EEG signals accurately. In addition to detection, the system provides possible causes and precautionary guidance to support early medical consultation and patient awareness.
+</p>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="card">
+
+<h3>Limitations of Existing Systems</h3>
+
+<div class="advantages-grid">
+
+<div class="adv-box">
+<h4>Noise Sensitivity</h4>
+<p>EEG signals are low amplitude and highly affected by noise and artifacts.</p>
+</div>
+
+<div class="adv-box">
+<h4>Limited Accuracy</h4>
+<p>Traditional ML models struggle to detect complex neurological patterns.</p>
+</div>
+
+<div class="adv-box">
+<h4>Handcrafted Features</h4>
+<p>Heavy dependence on manual feature extraction misses hidden EEG patterns.</p>
+</div>
+
+<div class="adv-box">
+<h4>Dataset Dependency</h4>
+<p>Existing systems often work only for specific datasets or single disorders.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section" id="advantages">
+
+<div class="card">
+
+<h3>Advantages of Proposed System</h3>
+
+<div class="advantages-grid">
+
+<div class="adv-box">
+<h4>High Detection Accuracy</h4>
+<p>Combines ensemble ML models and CNN-LSTM deep learning for better classification.</p>
+</div>
+
+<div class="adv-box">
+<h4>Advanced Preprocessing</h4>
+<p>FIR filters and ICA remove noise and improve EEG signal quality.</p>
+</div>
+
+<div class="adv-box">
+<h4>Multiple Disorder Detection</h4>
+<p>Supports detection of Epilepsy, Autism Spectrum Disorder, and Alzheimer’s disease.</p>
+</div>
+
+<div class="adv-box">
+<h4>Patient Guidance</h4>
+<p>Provides possible causes and precautionary recommendations for patients.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section" id="impact">
+
+<div class="card">
+
+<h3>Impact on Society</h3>
+
+<p>
+Neurological disorders affect millions of people worldwide and often remain undiagnosed in early stages. Automated EEG-based detection systems can assist doctors and healthcare providers by identifying abnormal brain patterns quickly and accurately.
+</p>
+
+<p>
+This system acts as an intelligent decision-support tool that helps in early diagnosis, improves patient awareness, and encourages timely medical consultation. By integrating artificial intelligence with neurological signal analysis, the system contributes to better healthcare outcomes and improved quality of life.
+</p>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<p><strong>EEG Neurological Disorder Detection System</strong></p>
+<p>Machine Learning & Deep Learning Based Healthcare AI</p>
+<p>Email: support@eegai.com | Phone: +91 98765 43210</p>
+<p>© 2026 All Rights Reserved</p>
+
+</footer>
+
+</body>
+</html>

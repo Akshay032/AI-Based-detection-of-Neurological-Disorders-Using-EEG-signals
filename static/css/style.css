@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* HOME */
+.home-bg {
+    background: linear-gradient(to right, #141e30, #243b55);
+    color: white;
+    text-align: center;
+    padding-top: 200px;
+}
+
+.center-box h1 {
+    font-size: 48px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background: #00c6ff;
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid white;
+}
+
+/* AUTH */
+.auth-bg {
+    background: url('/static/images/bg.jpg') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-container {
+    background: rgba(0,0,0,0.7);
+    padding: 40px;
+    color: white;
+    border-radius: 10px;
+    width: 300px;
+}
+
+.auth-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+/* DASHBOARD */
+.sidebar {
+    width: 200px;
+    height: 100vh;
+    background: #111;
+    color: white;
+    position: fixed;
+    padding: 20px;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    margin: 10px 0;
+    text-decoration: none;
+}
+
+.main-content {
+    margin-left: 200px;
+    padding: 20px;
+}
+
+.topbar {
+    background: #eee;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.card {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+}

@@ -1,0 +1,25 @@
+{% extends 'dashboard/base_dashboard.html' %}
+
+{% block content %}
+
+<h3>My Previous Predictions</h3>
+
+<table class="table table-striped mt-3">
+<tr>
+    <th>Input</th>
+    <th>Result</th>
+    <th>Date</th>
+</tr>
+
+{% for p in predictions %}
+<tr>
+    
+    <td>{{ p.input_data }}</td>
+    <td>{{ p.result }}</td>
+    <td>{{ p.created_at }}</td>
+</tr>
+{% endfor %}
+
+</table>
+
+{% endblock %}

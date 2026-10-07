@@ -1,0 +1,44 @@
+{% extends 'dashboard/base_dashboard.html' %}
+
+{% block content %}
+
+<h3 class="mb-4">Dashboard Overview</h3>
+
+<div class="row g-4">
+
+    <div class="col-md-3">
+        <div class="card-custom bg1">
+            <h6>Total Predictions</h6>
+            <h3>{{ total }}</h3>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card-custom bg2">
+            <h6>Models Available</h6>
+            <h3>3</h3>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card-custom bg3">
+            <h6>API Calls Today</h6>
+            <h3>25</h3>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card-custom bg4">
+            <h6>Account Type</h6>
+            <h3>Free</h3>
+        </div>
+    </div>
+
+</div>
+
+<div class="card mt-5 p-4 shadow-sm">
+    <h5>Recent Activity</h5>
+    <p>Your AI system is running smoothly. Start making predictions!</p>
+</div>
+
+{% endblock %}
